@@ -1,0 +1,110 @@
+.sec-3-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.sec-3-1 span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+}
+
+.sec-3-1 h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #000;
+}
+
+.sec-3-2 { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Shared styling for both frontend and backend boxes */
+.box2 {
+    width: 100%;
+    max-width: 350px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.box2 > span:first-child {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    word-break: break-word;
+}
+
+/* Skill container */
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Shared skill box layout */
+.skills-1, .skills-2 {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    word-wrap: break-word;
+    width: 100%;
+}
+
+/* Skill icons */
+.skills-1 img,
+.skills-2 img {
+    width: 30px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Skill text columns */
+.skills-1-2,
+.skills-2-1 {
+    display: flex;
+    flex-direction: column;
+    word-break: break-word;
+}
+
+.skills-1-2 > :nth-child(1),
+.skills-2-1 > :nth-child(1) {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .sec-3-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box2 {
+        max-width: 90%;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+}
